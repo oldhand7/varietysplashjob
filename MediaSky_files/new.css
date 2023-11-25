@@ -17,6 +17,79 @@
 html {
   scroll-behavior:smooth;
 }
+.started-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.started-btn:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to right, #f85032, #e73827);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.started-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(to bottom, #e73827, #f85032);
+  transform: translateY(-100%);
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.started-btn:hover:before {
+  transform: translateY(0);
+}
+
+.started-btn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 500px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.started-btn:hover:after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+
+
+.started {
+  display: inline;
+  padding: 12px 24px;
+  background: linear-gradient(359deg, rgb(251 6 6) 0%, rgb(239 78 78) 50%, rgb(191 11 11) 100%);
+  border-radius: 17px;
+  font-size: 24px !important;
+  
+}
+
+.started:hover {
+  background: #171717 !important;
+  transform: translateY(5px);
+}
+
 
 .nav-link-target::before {
   content: "";
@@ -10129,7 +10202,6 @@ blockquote {
 .hero-button:hover{
   transform: scale(1.1);
 
-  text-shadow: 0 0 10px red, 0 0 20px white;;
 }
 
 
